@@ -1,30 +1,29 @@
 # CodeAlpha_CGPA_Calculator
 
-#include <iostream>
+#include <iostream>/>
+#include <string>/>
+#include <vector>/>
+#include <iomanip> // decimal ke liye/>
+using namespace std;/>
 
-#include <string>
+double gradeToPoint(char g) />
+{/>
+    if(g=='A'||g=='a') return 4.0;/>
+    if(g=='B'||g=='b') return 3.0;/>
+    if(g=='C'||g=='c') return 2.0;/>
+    if(g=='D'||g=='d') return 1.0;/>
+    if(g=='F'||g=='f') return 0.0;/>
+    return -1; // invalid grade/>
+}/>
 
-#include <vector>
+int main()/>
+{/>
+    int n;/>
+    cout << "=== CodeAlpha Task 1: CGPA Calculator ===\n";/>
+    cout << "Kitne courses liye hain is semester: ";/>
+    cin >> n;/>
 
-#include <iomanip> // decimal ke liye
-using namespace std;
-
-double gradeToPoint(char g) {
-    if(g=='A'||g=='a') return 4.0;
-    if(g=='B'||g=='b') return 3.0;
-    if(g=='C'||g=='c') return 2.0;
-    if(g=='D'||g=='d') return 1.0;
-    if(g=='F'||g=='f') return 0.0;
-    return -1; // invalid grade
-}
-
-int main() {
-    int n;
-    cout << "=== CodeAlpha Task 1: CGPA Calculator ===\n";
-    cout << "Kitne courses liye hain is semester: ";
-    cin >> n;
-
-    vector<string> course(n);
+    vector<string> course(n);/>
     vector<char> grade(n);
     vector<double> credit(n);
 
